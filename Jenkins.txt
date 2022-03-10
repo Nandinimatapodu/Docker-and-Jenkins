@@ -1,0 +1,206 @@
+Jenkins:
+ Jenkins is an open source automation tool written in Java programming language that allows continuous integration.
+
+ Jenkins builds and tests our software projects which continuously making it easier for developers to integrate changes to the project,
+ and making it easier for users to obtain a fresh build.
+
+ It also allows us to continuously deliver our software by integrating with a large number of testing and deployment technologies.
+
+ Jenkins offers a straightforward way to set up a continuous integration or continuous delivery environment for 
+ almost any combination of languages and source code repositories using pipelines, as well as automating other routine development tasks.
+
+Continuous Integration with Jenkins:
+
+ Let's consider a scenario where the complete source code of the application was built and then deployed on test server for testing. 
+ It sounds like a perfect way to develop software, but this process has many problems.
+
+ Developer teams have to wait till the complete software is developed for the test results.
+ There is a high prospect that the test results might show multiple bugs. 
+ It was tough for developers to locate those bugs because they have to check the entire source code of the application.
+ It slows the software delivery process.
+ Continuous feedback pertaining to things like architectural or coding issues, build failures, 
+ test status and file release uploads was missing due to which the quality of software can go down.
+ The whole process was manual which increases the threat of frequent failure.
+
+Advantages of Jenkins
+
+ It is an open source tool.
+ It is free of cost.
+ It does not require additional installations or components. Means it is easy to install.
+ Easily configurable.
+ It supports 1000 or more plugins to ease your work. If a plugin does not exist, you can write the script for it and share with community.
+ It is built in java and hence it is portable.
+ It is platform independent. It is available for all platforms and different operating systems. Like OS X, Windows or Linux.
+ Easy support, since it open source and widely used.
+ Jenkins also supports cloud based architecture so that we can deploy Jenkins in cloud based platforms.
+
+Jenkins Architecture
+
+  Jenkins follows Master-Slave architecture to manage distributed builds. In this architecture, slave and master communicate through TCP/IP protocol.
+
+  Jenkins architecture has two components:
+
+  Jenkins Master/Server
+  Jenkins Slave/Node/Build Server
+
+Jenkins Master
+
+  The main server of Jenkins is the Jenkins Master. 
+  It is a web dashboard which is nothing but powered from a war file.
+  By default it runs on 8080 port. With the help of Dashboard, we can configure the jobs/projects but the build takes place in Nodes/Slave.
+  By default one node (slave) is configured and running in Jenkins server. We can add more nodes using IP address, user name and password using the ssh, jnlp or webstart methods.
+
+ The server's job or master's job is to handle:
+
+
+  Scheduling build jobs.
+  Dispatching builds to the nodes/slaves for the actual execution.
+  Monitor the nodes/slaves (possibly taking them online and offline as required).
+  Recording and presenting the build results.
+  A Master/Server instance of Jenkins can also execute build jobs directly.
+
+ Jenkins Slave
+ Jenkins slave is used to execute the build jobs dispatched by the master. 
+ We can configure a project to always run on a particular slave machine, or particular type of slave machine, 
+ or simple let the Jenkins to pick the next available slave/node.
+
+ As we know Jenkins is developed using Java is platform independent thus Jenkins Master/Servers and Slave/nodes can be configured in any servers including Linux, Windows, and Mac.
+
+Jenkins Pipeline
+
+ In Jenkins, a pipeline is a collection of events or jobs which are interlinked with one another in a sequence.
+
+ It is a combination of plugins that support the integration and implementation of continuous delivery pipelines using Jenkins.
+
+ In other words, a Jenkins Pipeline is a collection of jobs or events that brings the software from version control into the hands 
+ of the end users by using automation tools. It is used to incorporate continuous delivery in our software development workflow.
+
+ A pipeline has an extensible automation server for creating simple or even complex delivery pipelines "as code", via DSL (Domain-specific language).
+
+
+What is Continuous Delivery Pipeline?
+  In a Jenkins Pipeline, every job has some sort of dependency on at least one or more jobs or events.
+
+  These jobs or events are interlinked with each other. Every state has its jobs, which work in a sequence called a continuous delivery pipeline.
+
+  A continuous delivery pipeline is an automated expression to show your process for getting software for version control. 
+  Thus, every change made in your software goes through a number of complex processes on its manner to being released.
+ 
+ It also involves developing the software in a repeatable and reliable manner, 
+  and progression of the built software through multiple stages of testing and deployment.
+
+
+JenkinsFile
+
+ Jenkins Pipeline can be defined by a text file called JenkinsFile.
+ You can implement pipeline as code using JenkinsFile, 
+ and this can be defined by using a DSL (Domain Specific Language).
+ With the help of JenkinsFile, you can write the steps required for running a Jenkins Pipeline.
+
+  The benefits of using JenkinsFile are:
+
+  You can make pipelines automatically for all branches and can execute pull requests with just one JenkinsFile.
+  You can review your code on the pipeline.
+  You can review your Jenkins pipeline.
+  This is the singular source for your pipeline and can be customized by multiple users.
+  
+
+
+Jenkins - Setup Build Jobs
+
+  Let's create and run a job in Jenkins for simple HelloWorld in Java.
+
+  Step 1: Go to the Jenkins dashboard and click on the New Item.
+  Step 2: In the next page, enter the item name, and select the 'Freestyle project' option. And click OK. Here, my item name is HelloWorld.
+  Step 3: When you enter the OK, you will get a configuration page. Enter the details of the project in the Description section.
+  Step 4: On the Source Code Management section, select the Git option, and specify the Repository URL.
+
+  To do that you should have proper github setup on your system. To do the github setup:
+
+  First, you have to create a project in java. Here, I created a simple HelloWorld program and saved it to one folder i.e. C:\GitRepo. Compile the HelloWorld.java file.
+
+  Now create a project in your GitHub account and give the Repository name. Here my repository name is HelloWorld.
+ 
+ Click on Create repository.
+
+ Your repository is created. Copy the repository URL.
+ Open the command prompt in your Windows and go to the path where your java file is created.
+ Then run the following command.
+
+   git init  
+   git status  
+   git add .  
+   git status
+
+ Configure your GitHub account in your system.
+  git config --global user.email "your@email"  
+  git config --global user.name "username"  
+
+  Commit it and add the repository URL.
+  git commit -m "added HelloWorld program"  
+  git remote add origin url  
+  git push -u origin master
+  Now, when you refresh your GitHub account, the helloWorld file will be added in your repository.
+
+  Step 5: Add the Repository URL in the Source Code Management section. 
+  You can also use a local repository. And if your GitHub repository is private, 
+  Jenkins will first validate your login credentials with GitHub and only then access the source code from your GitHub repository.
+
+  Step 6: Now, it is time to build the code. Click on "Add build step" and select the "Execute Windows batch command".
+
+  Step 7: Enter the following command to compile the java code.   
+  javac HelloWorld.java  
+  java HelloWorld  
+
+
+  Step 8: Click Apply and then Save button.
+
+  Step 9: Once you saved the configuration, then now can click on Build Now option.
+  Step 10: After clicking on Build Now, you can see the status of the build on the Build History section.
+
+  Once the build is completed, a status of the build will show if the build was successful or not. 
+  If the build is failed then it will show in red color. Blue symbol is for success.
+
+
+  Click on the build number #1 in the Build History section to see the details of the build.
+
+
+  Step 11: Click on Console Output from the left side of the screen to see the status of the build you run. It should show the success message.
+ 
+
+
+Jenkins - Managing Plugins
+  Jenkins provides a variety of plugins for a different tasks.
+
+Installing Plugins:
+Step 1: To install a plugin, go to the Jenkins Dashboard and click on Manage Jenkins.
+Step 2: Scroll down and select Manage Plugins.
+Step 3: Go to the Available tab and in the filter option, search for the plugins which you want to install.
+Step 4: Select that plugins and click on Install without restart button. You can also choose Download now and install after restart button.
+Once the installation has been completed successfully, click on Go back to the top page link.
+
+
+Uninstalling Plugins
+Step 1: To uninstall a plugin in Jenkins, go to the Manage Jenkins.
+Step 2: Select Manage Plugins.
+Step 3: Click on the Installed tab. And select the pipeline which you want to uninstall and click on Uninstall button.
+Step 4: Click on Yes button.
+Your selected plugin will remove successfully.
+
+
+Installing the plugin manually
+Sometimes it may be necessary to install an older version of a plugin, in such a case, you install the plugin manually.
+
+Step 1: For this, first, you have to download the plugin from the relevant plugin page on the Jenkins website. 
+Then go to the Jenkins dashboard and select Manage Jenkins
+Step 2: Select Manage Plugins.
+Step 3: Click on Advanced tab and on the upload plugin section browse the downloaded plugin's location.
+Step 4: Then click on the Upload button.
+
+
+
+
+
+
+
+
