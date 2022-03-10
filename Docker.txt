@@ -1,0 +1,226 @@
+Docker:
+  Docker is an open-source centralized platform designed to create, deploy, and run applications.
+  Docker uses container on the host's operating system to run applications.
+  It allows applications to use the same Linux kernel as a system on the host computer, rather than creating a whole virtual operating system.
+  Containers ensure that our application works in any environment like development, test, or production.
+
+Docker Containers
+  Docker containers are the lightweight alternatives of the virtual machine.
+  It allows developers to package up the application with all its libraries and dependencies, and ship it as a single package. 
+  The advantage of using a docker container is that you don't need to allocate any RAM and disk space for the applications.
+  It automatically generates storage and space according to the application requirement.
+
+
+Advantages of Docker:
+
+  It runs the container in seconds instead of minutes.
+  It uses less memory.
+  It provides lightweight virtualization.
+  It does not a require full operating system to run applications.
+  It uses application dependencies to reduce the risk.
+  Docker allows you to use a remote repository to share your container with others.
+  It provides continuous deployment and testing environment.
+
+Docker Engine
+
+  It is a client server application that contains the following major components.
+  A server which is a type of long-running program called a daemon process.
+  The REST API is used to specify interfaces that programs can use to talk to the daemon and instruct it what to do.
+  A command line interface client.
+
+            
+Docker architecture
+  Docker follows Client-Server architecture, which includes the three main components that are Docker Client, Docker Host, and Docker Registry.
+
+1. Docker Client
+ Docker client uses commands and REST APIs to communicate with the Docker Daemon (Server).
+ When a client runs any docker command on the docker client terminal, the client terminal sends these docker commands to the Docker daemon. 
+ Docker daemon receives these commands from the docker client in the form of command and REST API's reques
+
+ Docker Client uses Command Line Interface (CLI) to run the following commands -
+
+ docker build
+
+ docker pull
+
+ docker run
+
+2. Docker Host
+ Docker Host is used to provide an environment to execute and run applications.
+ It contains the docker daemon, images, containers, networks, and storage.
+
+3. Docker Registry
+ Docker Registry manages and stores the Docker images.
+
+  There are two types of registries in the Docker -
+
+   Pubic Registry - Public Registry is also called as Docker hub.
+   Private Registry - It is used to share images within the enterprise.
+
+Docker Images
+ Docker images are the read-only binary templates used to create Docker Containers.
+ It uses a private container registry to share container images within the enterprise and also uses public container registry to share container images within the whole world.
+ Metadata is also used by docket images to describe the container's abilities.
+
+
+Docker Networking
+  Using Docker Networking, an isolated package can be communicated. Docker contains the following network drivers -
+
+  Bridge - Bridge is a default network driver for the container. It is used when multiple docker communicates with the same docker host.
+  Host - It is used when we don't need for network isolation between the container and the host.
+  None - It disables all the networking.
+  Overlay - Overlay offers Swarm services to communicate with each other. It enables containers to run on the different docker host.
+
+
+Docker Commands
+1. docker –version
+
+This command is used to get the currently installed version of docker
+
+
+2. docker pull
+
+ docker pull <image name>
+
+This command is used to pull images from the docker repository(hub.docker.com)
+
+
+3. docker run
+
+  docker run -it -d <image name>
+
+This command is used to create a container from an image
+
+
+4. docker ps
+
+This command is used to list the running containers
+
+
+5. docker ps -a
+
+This command is used to show all the running and exited containers
+
+
+6. docker exec
+
+ docker exec -it <container id> bash
+
+This command is used to access the running container
+
+
+7. docker stop
+
+ docker stop <container id>
+
+This command stops a running container
+
+
+8. docker kill
+
+ docker kill <container id>
+
+This command kills the container by stopping its execution immediately. 
+The difference between ‘docker kill’ and ‘docker stop’ is that ‘docker stop’ gives the container time to shutdown gracefully, in situations
+ when it is taking too much time for getting the container to stop, one can opt to kill it
+
+
+9. docker commit
+
+ docker commit <conatainer id> <username/imagename>
+
+This command creates a new image of an edited container on the local system
+
+
+10. docker login
+
+This command is used to login to the docker hub repository
+
+
+11. docker push
+
+ docker push <username/image name>
+
+ This command is used to push an image to the docker hub repository
+
+
+12. docker images
+
+  This command lists all the locally stored docker images
+
+
+13. docker rm
+
+ docker rm <container id>
+
+This command is used to delete a stopped container
+
+
+14. docker rmi
+
+ docker rmi <image-id>
+
+This command is used to delete an image from local storage
+
+
+15. docker build
+
+ docker build <path to docker file>
+
+This command is used to build an image from a specified docker file
+
+Docker compose:
+
+ Compose is a tool for defining and running multi-container Docker applications. 
+ With Compose, you use a YAML file to configure your application’s services.
+ Then, with a single command, you create and start all the services from your configuration. 
+ 
+
+ Using Compose is basically a three-step process:
+
+ Define your app’s environment with a Dockerfile so it can be reproduced anywhere.
+
+ Define the services that make up your app in docker-compose.yml so they can be run together in an isolated environment.
+
+ Run docker compose up and the Docker compose command starts and runs your entire app. You can alternatively run docker-compose up using the docker-compose binary.
+
+ A docker-compose.yml looks like this:
+
+ version: "3.9"  # optional since v1.27.0
+services:
+  web:
+    build: .
+    ports:
+      - "8000:5000"
+    volumes:
+      - .:/code
+      - logvolume01:/var/log
+    links:
+      - redis
+  redis:
+    image: redis
+volumes:
+  logvolume01: {}
+ 
+Docker swarm:
+
+ swarm init
+ swarm join
+ service create
+ service inspect
+ service ls
+ service rm
+ service scale
+ service ps
+ service update
+
+
+
+
+
+
+
+
+
+
+
