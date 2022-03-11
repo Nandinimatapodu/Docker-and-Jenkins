@@ -1,0 +1,534 @@
+Java
+
+  Java is a programming language and a platform. Java is a high level, robust, 
+  object-oriented and secure programming language.
+
+  Java was developed by Sun Microsystems in the year 1995.
+
+Platform:
+   Any hardware or software environment in which a program runs,
+   is known as a platform. Since Java has a runtime environment (JRE) and API,
+   it is called a platform 
+
+Applications:
+   According to Sun, 3 billion devices run Java. 
+   There are many devices where Java is currently used. Some of them are as follows:
+
+   1.Desktop Applications such as acrobat reader, media player, antivirus, etc.
+   2.Web Applications such as irctc.co.in, javatpoint.com, etc.
+   3.Enterprise Applications such as banking applications.
+   4.Mobile
+   5.Embedded System
+   6.Smart Card
+   7.Robotics
+
+
+OOPs(Object-Oriented Programming System)
+
+   Object means a real-world entity such as a pen, chair, 
+   table, computer, watch, etc. 
+   Object-Oriented Programming is a methodology or 
+   paradigm to design a program using classes and objects. 
+   It simplifies software development and maintenance by providing some concepts:
+
+   1.Object
+   2.Class
+   3.Inheritance
+   4.Polymorphism
+   5.Abstraction
+   6.Encapsulation
+
+
+Inheritance
+
+   When one object acquires all the properties and behaviors of a parent object,
+   it is known as inheritance. It provides code reusability. 
+   It is used to achieve runtime polymorphism.
+
+Polymorphism
+
+    If one task is performed in different ways, it is known as polymorphism.
+    In Java, we use method overloading and method overriding to achieve polymorphism.
+
+Abstraction
+    Hiding internal details and showing functionality is known as abstraction.
+    In Java, we use abstract class and interface to achieve abstraction.
+
+Encapsulation 
+
+    Binding (or wrapping) code and data together into a single unit are known as encapsulation. 
+    A java class is the example of encapsulation.
+    Java bean is the fully encapsulated class because all the data members are
+    private here.
+
+Variables:
+
+     A variable is a container which holds the value while the Java program is 
+     executed. A variable is assigned with a data type.
+
+     Variable is a name of memory location. 
+     There are three types of variables in java: local, instance and static.
+
+     There are two types of data types in Java: primitive and non-primitive.
+
+     Types of variables in java
+     1) Local Variable
+       A variable declared inside the body of the method is called local variable.
+       You can use this variable only within that method and the other methods in the
+       class aren't even aware that the variable exists.
+
+       A local variable cannot be defined with "static" keyword.
+
+     2) Instance Variable
+       A variable declared inside the class but outside the body of the method,
+       is called an instance variable. It is not declared as static.
+
+      It is called an instance variable because its value is instance-specific and
+      is not shared among instances.
+
+     3) Static variable
+       A variable that is declared as static is called a static variable. 
+       It cannot be local.
+       You can create a single copy of the static variable and share it among 
+       all the instances of the class. Memory allocation for static variables happens only
+       once when the class is loaded in the memory.
+
+Controll statements:
+       
+    Java provides three types of control flow statements.
+
+     Decision Making statements
+       if statements
+       switch statement
+     Loop statements
+       do while loop
+       while loop
+       for loop
+       for-each loop
+     Jump statements
+       break statement
+       continue statement
+
+
+Methods:
+ 
+   A method is a block of code or collection of statements or a set of code grouped 
+   together to perform a certain task or operation. It is used to achieve the reusability of code.
+   We write a method once and use it many times.  
+   We do not require to write code again and again.
+   It also provides the easy modification and readability of code
+ 
+Arrays
+
+  Normally, an array is a collection of similar type of elements which has contiguous memory location.
+  Java array is an object which contains elements of a similar data type.
+  Additionally, The elements of an array are stored in a contiguous memory location. 
+  It is a data structure where we store similar elements. We can store only a fixed set of elements in a Java array.
+  
+  Array in Java is index-based, the first element of the array is stored at the 0th index, 2nd element is stored on 1st index and so on.
+
+Method Overloading
+
+  If a class has multiple methods having same name but different in parameters, it is known as Method Overloading.
+  If we have to perform only one operation, having same name of the methods increases the readability of the program.
+
+Method Overriding 
+
+  If subclass (child class) has the same method as declared in the parent class, it is known as method overriding in Java.
+  In other words, If a subclass provides the specific implementation of the method that has 
+  been declared by one of its parent class, it is known as method overriding.
+
+Super Keyword 
+  The super keyword in Java is a reference variable which is used to refer immediate parent class object.
+  Whenever you create the instance of subclass, an instance of parent class is created implicitly which is referred by super reference variable.
+
+  Usage of Java super Keyword
+    super can be used to refer immediate parent class instance variable.
+    super can be used to invoke immediate parent class method.
+    super() can be used to invoke immediate parent class constructor.
+
+Final Keyword 
+
+   The final keyword in java is used to restrict the user. The java final keyword can be used in many context. Final can be:
+     variable
+     method
+     class
+   The final keyword can be applied with the variables,
+   a final variable that have no value it is called blank final variable or uninitialized final variable. 
+   It can be initialized in the constructor only. 
+   The blank final variable can be static also which will be initialized in the static block only.
+
+Interface
+   An interface in Java is a blueprint of a class. It has static constants and abstract methods.
+   The interface in Java is a mechanism to achieve abstraction. 
+   There can be only abstract methods in the Java interface, not method body. 
+   It is used to achieve abstraction and multiple inheritance in Java.
+   In other words, you can say that interfaces can have abstract methods and variables. It cannot have a method body.
+
+Access Modifiers 
+
+   There are two types of modifiers in Java: access modifiers and non-access modifiers.
+   The access modifiers in Java specifies the accessibility or scope of a field, method, constructor, or class.
+   We can change the access level of fields, constructors, methods, and class by applying the access modifier on it.
+   There are four types of Java access modifiers:
+        Private: The access level of a private modifier is only within the class. It cannot be accessed from outside the class.
+        Default: The access level of a default modifier is only within the package. 
+                 It cannot be accessed from outside the package. If you do not specify any access level, it will be the default.
+        Protected: The access level of a protected modifier is within the package and outside the package through child class. 
+        Public: The access level of a public modifier is everywhere. It can be accessed from within the class, outside the class, 
+                 within the package and outside the package.
+
+
+String
+   In Java, string is basically an object that represents sequence of char values. An array of characters works same as Java string. For example:
+    char[] ch={'H','e','l','l','o'};  
+    String s=new String(ch);  
+    is same as:
+    String s="Hello";  
+   Java String class provides a lot of methods to perform operations on strings such as compare(), concat(), equals(),
+    split(), length(), replace(), compareTo(), intern(), substring() etc.
+
+
+
+Exception Handling 
+   The Exception Handling in Java is one of the powerful mechanism to handle the runtime errors so that the normal flow of the application can be maintained.
+   types of exceptions
+     1) Checked Exception
+        The classes that directly inherit the Throwable class except RuntimeException and Error 
+        are known as checked exceptions. For example, IOException, SQLException, etc.
+        Checked exceptions are checked at compile-time.
+
+     2) Unchecked Exception
+         The classes that inherit the RuntimeException are known as unchecked exceptions. 
+         For example, ArithmeticException, NullPointerException, ArrayIndexOutOfBoundsException, etc.
+         Unchecked exceptions are not checked at compile-time, but they are checked at runtime.
+
+     3) Error
+        Error is irrecoverable. Some example of errors are OutOfMemoryError, VirtualMachineError, AssertionError etc.
+
+
+Multithreading 
+
+    Multithreading in Java is a process of executing multiple threads simultaneously.
+    A thread is a lightweight sub-process, the smallest unit of processing. Multiprocessing and multithreading, both are used to achieve multitasking.
+    However, we use multithreading than multiprocessing because threads use a shared memory area.
+    They don't allocate separate memory area so saves memory, and context-switching between the threads takes less time than process.
+    Java Multithreading is mostly used in games, animation, etc.
+
+Multitasking
+    Multitasking is a process of executing multiple tasks simultaneously. 
+    We use multitasking to utilize the CPU. Multitasking can be achieved in two ways:
+     1) Process-based Multitasking (Multiprocessing)
+       Each process has an address in memory. In other words, each process allocates a separate memory area.
+       A process is heavyweight.
+       Cost of communication between the process is high.
+       Switching from one process to another requires some time for saving and loading registers, memory maps, updating lists, etc.
+     2) Thread-based Multitasking (Multithreading)
+       Threads share the same address space.
+       A thread is lightweight.
+       Cost of communication between the thread is low.
+
+
+Collections
+   The Collection in Java is a framework that provides an architecture to store and manipulate the group of objects.
+
+   Java Collections can achieve all the operations that you perform on a data such as searching, sorting, insertion, manipulation, and deletion.
+
+   Java Collection means a single unit of objects. Java Collection framework provides
+   many interfaces (Set, List, Queue, Deque) and 
+   classes (ArrayList, Vector, LinkedList, PriorityQueue, HashSet, LinkedHashSet, TreeSet).
+
+
+List Interface
+ List interface is the child interface of Collection interface.
+ It inhibits a list type data structure in which we can store the ordered collection of objects.
+ It can have duplicate values.
+
+  List interface is implemented by the classes ArrayList, LinkedList, Vector, and Stack.
+
+   To instantiate the List interface, we must use :
+
+    List <data-type> list1= new ArrayList();  
+    List <data-type> list2 = new LinkedList();  
+    List <data-type> list3 = new Vector();  
+    List <data-type> list4 = new Stack();  
+
+ArrayList
+  The ArrayList class implements the List interface.
+  It uses a dynamic array to store the duplicate element of different data types. 
+  The ArrayList class maintains the insertion order and is non-synchronized.
+  The elements stored in the ArrayList class can be randomly accessed. 
+
+example
+import java.util.*;  
+class TestJavaCollection1{  
+public static void main(String args[]){  
+ArrayList<String> list=new ArrayList<String>();
+list.add("Ravi"); 
+list.add("Vijay");  
+list.add("Ravi");  
+list.add("Ajay");  
+Iterator itr=list.iterator();  
+while(itr.hasNext()){  
+System.out.println(itr.next());  
+}  
+}  
+}  
+
+
+LinkedList
+  LinkedList implements the Collection interface. 
+  It uses a doubly linked list internally to store the elements.
+  It can store the duplicate elements. It maintains the insertion order and is not synchronized.
+  In LinkedList, the manipulation is fast because no shifting is required.
+
+example.
+
+import java.util.*;  
+public class TestJavaCollection2{  
+public static void main(String args[]){  
+LinkedList<String> al=new LinkedList<String>();  
+al.add("Ravi");  
+al.add("Vijay");  
+al.add("Ravi");  
+al.add("Ajay");  
+Iterator<String> itr=al.iterator();  
+while(itr.hasNext()){  
+System.out.println(itr.next());  
+}  
+}  
+}}
+Vector
+  Vector uses a dynamic array to store the data elements. 
+  It is similar to ArrayList.
+  However, It is synchronized and contains many methods that are not the part of Collection framework.
+
+example.
+
+import java.util.*;  
+public class TestJavaCollection3{  
+public static void main(String args[]){  
+Vector<String> v=new Vector<String>();  
+v.add("Ayush");  
+v.add("Amit");  
+v.add("Ashish");  
+v.add("Garima");  
+Iterator<String> itr=v.iterator();  
+while(itr.hasNext()){  
+System.out.println(itr.next());  
+}  
+}  
+}  
+
+Stack
+ The stack is the subclass of Vector.
+ It implements the last-in-first-out data structure, i.e., Stack.
+ The stack contains all of the methods of Vector class and also provides its methods like boolean push(), boolean peek(),
+ boolean push(object o), which defines its properties.
+
+example
+
+import java.util.*;  
+public class TestJavaCollection4{  
+public static void main(String args[]){  
+Stack<String> stack = new Stack<String>();  
+stack.push("Ayush");  
+stack.push("Garvit");  
+stack.push("Amit");  
+stack.push("Ashish");  
+stack.push("Garima");  
+stack.pop();  
+Iterator<String> itr=stack.iterator();  
+while(itr.hasNext()){  
+System.out.println(itr.next());  
+}  
+}  
+}  
+
+Queue Interface
+  Queue interface maintains the first-in-first-out order.
+  It can be defined as an ordered list that is used to hold the elements which are about to be processed.
+  There are various classes like PriorityQueue, Deque, and ArrayDeque which implements the Queue interface.
+
+Queue interface can be instantiated as:
+
+Queue<String> q1 = new PriorityQueue();  
+Queue<String> q2 = new ArrayDeque();  
+There are various classes that implement the Queue interface, some of them are given below.
+
+PriorityQueue
+  The PriorityQueue class implements the Queue interface.
+  It holds the elements or objects which are to be processed by their priorities. 
+  PriorityQueue doesn't allow null values to be stored in the queue.
+
+example
+
+import java.util.*;  
+public class TestJavaCollection5{  
+public static void main(String args[]){  
+PriorityQueue<String> queue=new PriorityQueue<String>();  
+queue.add("Amit Sharma");  
+queue.add("Vijay Raj");  
+queue.add("JaiShankar");  
+queue.add("Raj");  
+System.out.println("head:"+queue.element());  
+System.out.println("head:"+queue.peek());  
+System.out.println("iterating the queue elements:");  
+Iterator itr=queue.iterator();  
+while(itr.hasNext()){  
+System.out.println(itr.next());  
+}  
+queue.remove();  
+queue.poll();  
+System.out.println("after removing two elements:");  
+Iterator<String> itr2=queue.iterator();  
+while(itr2.hasNext()){  
+System.out.println(itr2.next());  
+}  
+}  
+}  
+
+Deque Interface
+  Deque interface extends the Queue interface. 
+  In Deque, we can remove and add the elements from both the side. Deque stands for a double-ended queue 
+  which enables us to perform the operations at both the ends.
+
+Deque can be instantiated as:
+
+Deque d = new ArrayDeque(); 
+ 
+ArrayDeque
+ ArrayDeque class implements the Deque interface. It facilitates us to use the Deque.
+ Unlike queue, we can add or delete the elements from both the ends.
+ ArrayDeque is faster than ArrayList and Stack and has no capacity restrictions.
+example:
+
+import java.util.*;  
+public class TestJavaCollection6{  
+public static void main(String[] args) {  
+//Creating Deque and adding elements  
+Deque<String> deque = new ArrayDeque<String>();  
+deque.add("Gautam");  
+deque.add("Karan");  
+deque.add("Ajay");  
+//Traversing elements  
+for (String str : deque) {  
+System.out.println(str);  
+}  
+}  
+
+Set Interface
+  Set Interface in Java is present in java.util package.
+  It extends the Collection interface. It represents the unordered set of elements which doesn't allow us to store the duplicate items.
+  We can store at most one null value in Set. Set is implemented by HashSet, LinkedHashSet, and TreeSet.
+
+Set can be instantiated as:
+
+Set<data-type> s1 = new HashSet<data-type>();  
+Set<data-type> s2 = new LinkedHashSet<data-type>();  
+Set<data-type> s3 = new TreeSet<data-type>();  
+
+HashSet
+  HashSet class implements Set Interface.
+  It represents the collection that uses a hash table for storage.
+  Hashing is used to store the elements in the HashSet. It contains unique items.
+
+example:
+
+import java.util.*;  
+public class TestJavaCollection7{  
+public static void main(String args[]){  
+//Creating HashSet and adding elements  
+HashSet<String> set=new HashSet<String>();  
+set.add("Ravi");  
+set.add("Vijay");  
+set.add("Ravi");  
+set.add("Ajay");  
+//Traversing elements  
+Iterator<String> itr=set.iterator();  
+while(itr.hasNext()){  
+System.out.println(itr.next());  
+}  
+}  
+}  
+
+LinkedHashSet
+  LinkedHashSet class represents the LinkedList implementation of Set Interface.
+  It extends the HashSet class and implements Set interface. Like HashSet, It also contains unique elements.
+  It maintains the insertion order and permits null elements.
+
+example
+
+import java.util.*;  
+public class TestJavaCollection8{  
+public static void main(String args[]){  
+LinkedHashSet<String> set=new LinkedHashSet<String>();  
+set.add("Ravi");  
+set.add("Vijay");  
+set.add("Ravi");  
+set.add("Ajay");  
+Iterator<String> itr=set.iterator();  
+while(itr.hasNext()){  
+System.out.println(itr.next());  
+}  
+}  
+}  
+
+SortedSet Interface
+  SortedSet is the alternate of Set interface that provides a total ordering on its elements. 
+  The elements of the SortedSet are arranged in the increasing (ascending) order. 
+  The SortedSet provides the additional methods that inhibit the natural ordering of the elements.
+
+The SortedSet can be instantiated as:
+
+SortedSet<data-type> set = new TreeSet();  
+
+TreeSet
+  Java TreeSet class implements the Set interface that uses a tree for storage.
+  Like HashSet, TreeSet also contains unique elements. However, the access and retrieval time of TreeSet is quite fast.
+  The elements in TreeSet stored in ascending order.
+
+example:
+
+import java.util.*;  
+public class TestJavaCollection9{  
+public static void main(String args[]){  
+//Creating and adding elements  
+TreeSet<String> set=new TreeSet<String>();  
+set.add("Ravi");  
+set.add("Vijay");  
+set.add("Ravi");  
+set.add("Ajay");  
+//traversing elements  
+Iterator<String> itr=set.iterator();  
+while(itr.hasNext()){  
+System.out.println(itr.next());  
+}  
+}  
+}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
