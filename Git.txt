@@ -1,0 +1,85 @@
+Git
+  Git is a version control system which lets you track changes you make to your files over time. 
+  With Git, you can revert to various states of your files.
+  You can also make a copy of your file, make changes to that copy, and then merge these changes to the original copy.
+
+Firstly,go to github.com and create an account
+create Repository
+
+Configuring Git:
+ 
+ git --version -> shows current version
+ To set your username, type and execute these commands:
+ git config --global user.name "YOUR_USERNAME"
+ and
+ git config --global user.email "YOUR_EMAIL".
+ Just make sure to replace "YOUR_USERNAME" and "YOUR_EMAIL" with the values you choose.
+ git config --global --Lis ->this will give your username & email
+
+Creating and initializing project
+
+  cd desktop/ -> directory where we store the project
+
+  cd gitproject/ -> changing to folder name of project
+  
+  ls -> lists all the files in git
+  
+  git init ->for initializing repository
+  
+  git status ->to check the state of repository and the staging area
+  
+  git add ->adds a file to the git statging area
+  
+  git commit -m 'initial commit for folder name project' -> in the place of folder name give the folder under which project is
+  commit is used to create a snapshot of the staged changes along a timeline of a git projects history
+ 
+  git ls-files ->print files in the current working directory
+
+  git remote add origin url ->in place lo url copy the url of repository created and paste here
+  
+  git branch -M main -> the current branch is renamed to main
+ 
+  git push -u origin main ->used to push the code to main branch
+
+finally added the project to git repository .
+ 
+  mate filename -> used to edit text files
+  
+  pwd -> present working directory
+  
+  rm -rf foldername/ ->remove files
+  
+  fork -> copy of a repository that you manage
+  fork let you make changes to a project without affecting the original repository.
+
+  git pull origin master -> used to fetch and download content fron a rempte repository & immediately update local repository to match that content.
+
+  git reset file name -> undo local changes to the state of a git repository
+
+  git  checkout branch name 
+  used for switching between different versions of a target entity
+  git checkout command operates upon three different entities which are files,commits,and branches. 
+
+  git mv -> rename and move files
+
+  git branch -> to see local branches 
+   
+  git stash -> saves the uncommited changes locally
+  allowing you to make changes,switch branches and perform other git
+
+  git tag <tag_name> HEAD -> for the last commit
+
+  git tag <tag_name> HEAD-1 -> for the commit before head
+  
+  git show v1.4 -> to show more information on tag
+
+  Advantages of Git:
+  1. Performance
+
+  2. Security
+ 
+  3. Flexibility
+
+  4.  Wide acceptance
+
+  5. Quality open source project  
