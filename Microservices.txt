@@ -1,0 +1,582 @@
+Microservices
+
+Microservice Architecture is a special design pattern of service-oriented Architecture
+It is an open source methodology.
+All the processes will communicate with each other.
+ 
+Microservices are a result of problems with 
+two architecture paradigms:
+- Monolith
+- SOA
+
+Monolith Architecture
+• The original architecture
+• All software components are executed in a single process
+• No distribution of any kind
+• Strong coupling between all classes
+• Usually implemented as Silo
+
+
+Monolith Architecture Pros
+• Easier to design
+• Performance
+
+
+SOA
+Service Oriented Architecture
+• First coined in 1998
+• Apps are services exposing functionality to the outside world
+• Services expose metadata to declare their functionality
+• Usually implemented using SOAP & WSDL
+• Usually implemented with ESB
+
+SOA Pros
+• Sharing Data & Functionality
+• Polyglot Between Services
+
+
+Problems with Monolith & SOA
+
+• A lot of problems were found in both paradigms
+• Problems relevant to technology, deployment, cost and more
+
+Single Technology Platform
+• With monolith, all the components must be developed using the 
+same development platform
+• Not always the best for the task
+• Can’t use specific platform for specific features
+• Future upgrade is a problem – need to upgrade the whole app
+
+Inflexible Deployment
+• With monolith, new deployment is always for the whole app
+• No way to deploy only part of the app
+• Even when updating only one component – the whole codebase is 
+deployed
+• Forces rigorous testing for every deployment
+• Forces long development cycles
+
+Inefficient Compute Resources
+• With monolith, compute resources (CPU and RAM) are divided 
+across all components
+• If a specific component needs more resources – no way to do that
+• Very inefficient
+ 
+Large and Complex
+• With monolith, the codebase is large and complex
+• Every little change can affect other components
+• Testing not always detects all the bugs
+• Very difficult to maintain
+• Might make the system obsolete
+
+Production
+Complicated and Expensive ESB
+• With SOA, the ESB is one of the main components
+• Can quickly become bloated and expensive
+• Tries to do everything
+• Very difficult to maintain
+
+Lack of Tooling
+• For SOA to be effective, short development cycles were needed
+• Allow for quick testing and deployment
+• No tooling existed to support this
+• No time saving was achieved
+
+History
+• Problems with monolith and SOA led to a new paradigm
+• Has to be modular, with simple API
+• The term “microservices” first appeared in 2011
+• In 2014 Martin Fowler and James Lewis published their 
+“Microservices” article
+• Became the de-facto standard for Microservices definition
+
+Characteristics of Microservices
+1.Componentization via Services
+2.Organized Around Business Capabilities
+3.Products not Projects
+4.Smart Endpoints and Dumb Pipes
+5.Decentralized Governance
+6.Decentralized Data Management
+7.Infrastructure Automation
+8.Design for Failure
+9.Evolutionary Design
+
+Componentization via Services
+• Modular design is always a good idea
+• Components are the parts that together compose the software
+• Modularity can be achieved using:
+• Libraries – called directly within the process
+• Services – called by out-of-process mechanism (Web API, RPC)
+• In Microservices we prefer using Services for the componentization
+• Libraries can be used inside the service
+Motivation:
+• Independent deployment
+• Well defined interface
+
+Organized Around Business Capabilities
+• Traditional projects have teams with horizontal responsibilities –
+UI, API, Logic, DB etc
+• With Microservices, every service is handled by a single team, 
+responsible for all aspects. 
+UI – Team A
+API – Team A
+Logic – Team A
+Database – Team A
+• With Microservices, every service handles a well-defined business 
+capability.
+Motivation:
+• Quick development
+• Well-defined boundaries
+
+Products not Projects
+• With traditional projects, the goal is to deliver a working code
+• No lasting relationship with the customer
+• Often no acquaintance with the customer
+• After delivering – the team moves on to the next project 
+• With Microservices – the goal is to deliver a working product
+• A product needs ongoing support and requires close relationship 
+with the customer
+• The team is responsible for the Microservice after the delivery too
+“You build it, you run it”
+Motivation:
+• Increase customer’s satisfaction
+• Change developers’ mindset
+
+Smart Endpoints and Dumb Pipes
+• Traditional SOA projects used two complicated mechanisms:
+• ESB
+• WS-* protocol
+• Made inter-service communication complicated and difficult to 
+  maintain
+• Microservices systems use “dumb pipes” – simple protocols
+• Strive to use what the web already offers
+• Usually – REST API, the simplest API in existence
+• Important notes:
+• Direct connections between services is not a good idea
+• Better use discovery service or a gateway
+• In recent years more protocols were introduced (GraphQL, 
+gRPC), some of them quite complex
+Motivation:
+• Accelerate development
+• Make the app easier to maintain
+
+Decentralized Governance
+• In traditional projects there is a standard for almost anything:
+• Which dev platform to use
+• Which database to use
+• How logs are created
+• With Microservices each team makes its own decisions:
+• Which dev platform to use
+• Which database to use
+• How logs are created
+• Each team is fully responsible for its service 
+• Enabled by the loosely coupled nature of Microservices
+• Multi dev platform is called Polyglot
+Motivation:
+• Enables making the optimal technological decisions for the 
+specific service
+Decentralized Data Management
+• Traditional systems have a single database 
+• Stores all the system’s data from all the components
+
+Decentralized Data Management
+• Important notes:
+• This is the most controversial attribute of Microservices
+• Not always possible
+• Raises problems such as distributed transactions, data 
+duplication and more
+• Don’t insist on it
+Motivation:
+• Right tool for the right task – having the right database is 
+important
+• Encourages isolation
+
+Infrastructure Automation
+• The SOA paradigm suffered from lack of tooling
+• Tooling greatly helps in deployment using:
+• Automated Testing
+• Automated Deployment
+• For Microservices automation is essential
+• Short deployment cycles are a must
+• Can’t be done manually
+• There are a lot of automation tools:
+Motivation:
+• Short deployment cycles
+
+Design for Failure
+• With Microservices there are a lot of processes and a lot of 
+network traffic
+• A lot can go wrong
+• The code must assume failure can happen and handle it gracefully
+• Extensive logging and monitoring should be in place
+Motivation:
+• Increase system’s reliability
+
+Evolutionary Design
+• The move to Microservices should be gradual
+• No need to break everything apart
+• Start small and upgrade each part separately
+• These are guidelines, not mandatory instructions
+• Adopt what works for you
+• The Microservices world is rapidly changing
+• Follow new APIs, monitoring, cloud services etc.
+Summary
+• The most important attributes:
+• Componentization
+• Organized around business capabilities
+• Decentralized governance
+• Decentralized data management (when possible)
+• Infrastructure automation
+
+Problems Solved by Microservices
+
+Single Technology Platform
+• With monolith, all the components must be developed using the 
+same development platform
+• Not always the best for the task
+• Can’t use specific platform for specific features
+• Future upgrade is a problem – need to upgrade the whole app
+• With Microservices, the Decentralized Governance attribute 
+solves it
+
+Inflexible Deployment
+• With monolith, new deployment is always for the whole app
+• No way to deploy only part of the app
+• Even when updating only one component – the whole codebase is 
+deployed
+• Forces rigorous testing for every deployment
+• Forces long development cycles
+• With Microservices, the Componentization via Services 
+attribute solves it
+
+Inefficient Compute Resources
+• With monolith, compute resources (CPU and RAM) are divided 
+across all components
+• If a specific component needs more resources – no way to do that
+• Very inefficient
+
+Large and Complex
+• With monolith, the codebase is large and complex
+• Every little change can affect other components
+• Testing not always detects all the bugs
+• Very difficult to maintain
+• Might make the system obsolete
+Large and Complex
+
+Complicated and Expensive ESB
+• With SOA, the ESB is one of the main components
+• Can quickly become bloated and expensive
+• Tries to do everything
+• Very difficult to maintain
+
+Remember:
+- Application Gateway & Discovery
+- Other APIs: GraphQL, gRPC
+
+Lack of Tooling
+• For SOA to be effective, short development cycles were needed
+• Allow for quick testing and deployment
+• No tooling existed to support this
+• No time saving was achieved
+• Automates testing and deployment
+• Provides short deployment cycles
+• Make the architecture efficient and effective
+
+Designing Microservices Architecture
+
+• Designing Microservices Architecture should be methodical
+• Do not rush into development
+• “Plan more, code less”
+• Critical to the success of the system
+Architecture process:
+Understand the System’s Requirements
+Understand the Non-Functional Requirements
+Map the Components
+Select the Technology Stack
+Design the Architecture
+Write Architecture Document
+Support the Team
+
+Mapping the Components
+• The single most important step in the whole process
+• Determines how the system will look like in the long run
+• Once set – not easy to change
+Mapping the Components
+• What is it?
+• Defining the various components of the system
+• Remember: Components = Services
+• Mapping should be based on:
+• Business requirements
+• Functional autonomy
+• Data entities
+• Data autonomy
+ 
+Cross-Cutting Services
+• Services that provide system-wide utilities
+• Common examples:
+• Logging
+• Caching
+• User management
+• MUST be part of the mapping
+
+Defining Communication Patterns
+• Efficient communication between services is crucial
+• It’s important to choose the correct communication pattern
+• Main patterns:
+• 1-to-1 Sync
+• 1-to-1 Async
+• Pub-Sub / Event Driven
+
+Selecting Technology Stack
+• The Decentralized Governance allows selecting different technology 
+stack for each service.
+• We’ll focus on Backend platform and Storage platforms
+• There’s no objective “Right” or “Wrong”
+• Make it a concrete decision based on hard evidence
+
+
+Deploying Microservices
+
+• Deployment of microservices is extremely important 
+• Remember: “Infrastructure Automation”
+• Slow and complicated deployment will render the whole system 
+ineffective and useless
+• Architect should be aware of deployment, not responsible
+• We’ll discuss high-level concepts
+
+CI/CD
+• Stands for:
+• Continuous Integration / Continuous Delivery
+• The full automation of the integration and delivery stages
+
+Integration & Delivery
+Build Unit Tests Integration Tests Staging Production
+
+Why Use CI/CD?
+• Faster release cycle
+• Reliability
+• Reporting
+CI/CD Pipelines
+• The heart of the CI/CD process
+• Define the set of actions to perform as part of the CI/CD
+• Usually defined using YAML, with UI representation
+
+Why Containers?
+Predictability
+Performance
+Density
+The same package is deployed from the dev 
+machine to the test to production
+Container goes up in seconds vs minutes in VM
+One server can run thousands of containers vs 
+dozens of VMs
+
+Why Not Containers?
+Isolation Containers share the same OS, so isolation is 
+lighter than VM
+Docker
+• The most popular container environment
+• De-facto standard for containers
+• Released in 2013
+Docker Architecture
+
+Containers Management
+• Containers are a great deployment mechanism
+• Gain popularity
+• What happens when there are too many of them?
+
+Kubernetes
+• The most popular container management 
+platform
+• De-facto standard for container 
+management
+• Released by Google in 2014
+• Provides all aspects of management:
+• Routing
+• Scaling
+• High-Availability
+• Automated Deployment
+• Configuration Management
+• And more…
+
+Testing Microservices
+
+• Testing is important in all systems and all architecture types
+• With Microservices it’s even more important
+• Testing Microservices poses additional challenges
+Tests Types
+• Unit Tests
+• Integration Tests
+• End-to-End Tests
+
+Challenges with Microservices Testing
+• Microservices systems have a lot of moving parts
+• Testing and tracing all the services is not trivial
+• Testing state across services
+• Non-functional dependent services
+
+Unit Tests
+• Tests individual code units
+• Method, interface, etc.
+• In-process only
+• Usually automated
+• Developed by the developers
+
+Integration Tests
+• Test the service’s functionality
+• Cover (almost) all code paths in the service
+• Some paths might include accessing external objects
+• Database, other services
+• Pretends to be the real object / service to allow testing
+• Three types:
+• Fake
+• Stub
+• Mock
+
+Fake
+• Implements a shortcut to the external 
+service
+• For example – stores data in-memory
+• Many times implemented in-process
+• Requires code change in the code
+
+Stub
+Orders Service
+• Holds hard-coded data
+• Usually replaces data stored in a DB
+• Allows simulating data services quickly
+• No code change required
+
+Mock
+• Verifies access was made
+• Holds no data
+• No code change required 
+
+End-to-End Tests
+• Test the whole flow(s) of the system
+• Touch all services
+• Test for end state
+• Extremely fragile
+• Require code
+• Usually used for main scenarios only
+
+Service Mesh
+• Manages all service-to-service communication
+• Provides additional services
+• Platform agnostic (usually…)
+
+Problems Solved by Service Mesh
+• Microservices communicate between them a lot
+• The communication might cause a lot of problems and challenges:
+• Timeouts
+• Security
+• Retries
+• Monitoring
+• Testing (A/B testing, traffic splitting)
+• Load balancing
+
+Circuit Breaker
+• Prevents cascading failures when a service fails
+
+Types of Service Mesh
+• Two main types:
+• In-Process
+• Sidecar
+
+Products and Implementations
+• There are quite a few Service Mesh implementations
+• Some in-process, most sidecar
+• Most free, some aren’t
+• DO NOT develop your own
+
+Logging & Monitoring
+• Extremely important in Microservices
+• Flow goes through multiple processes
+• Hard to get wholistic view
+• Hard to know what’s going on with the services
+
+Implementing Logging
+• Logging should provide wholistic view on the system
+• Should allow tracing end-to-end flow
+• Should contain as much information as possible
+• Can be filtered using severity, module, time, etc.
+
+Logging Library
+• Better use one library for all the services
+• Winston (nodeJS), Serilog (.NET core)
+• If using various platforms – one library for each platform
+• Use severity wisely
+Logging Library
+• Log as much info as possible, at least:
+• Timestamp
+• User
+• Severity
+• Service
+• Message
+• Stack Trace (if error)
+• Correlation ID
+
+Correlation ID
+• A flow identifier
+• Correlates events between services
+• Enables stitching separate events to single flow
+
+
+Implementing Monitoring
+• Monitoring looks at metrics and detects anomalies
+• Provides simplified view of the system status
+• Alerts when there is a problem
+
+Microservices and the Organization
+• Microservices require different mindset
+• Traditional organizations will have hard time succeeding with 
+Microservices
+• Without adapting – there’s no point in going with Microservices
+
+Conway’s Law
+• Introduced in 1967 by Melvin Conway
+• Still relevant…
+• Describes the relationship between the organization and the 
+software structure / architecture
+Conway’s Law
+Any organization that designs a system (defined 
+broadly) will produce a design whose structure is a 
+copy of the organization's communication structure.
+
+The Problem with Traditional Team
+• When there are multiple teams – no one takes responsibility
+• Teams are horizontal – Backend, Frontend, IT etc.
+• No wholistic view on the product
+
+The Ideal Team
+• The ideal team is responsible for all aspects of the service:
+• Backend
+• Frontend
+• DB
+• Deployment
+
+Changing Mindset
+• Traditional organizations have hard time transitioning to 
+Microservices
+• Need help in the process
+• You can and should help
+
+Breaking Monolith to Microservices
+• Quite common scenario
+• The organization wants to improve the current system
+• Needs to be thoroughly planned
+• High rate of failures
+
+Motivation for Breaking Monolith
+• Shorten update cycle
+• Modularize the system
+• Save costs
+• Modernize the system
+• Being attractive
+
+Strategies for Breaking Monolith
+• Breaking Monolith is a delicate process
+• Must be planned ahead
+• There are three main strategies for that
+
+
+
